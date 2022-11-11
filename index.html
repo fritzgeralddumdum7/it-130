@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>IT 130</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Go Demons!</h1>
+        <h3>Congrats to the 2023 Blue Demons!</h3>
+        <label>Order your championship sweaters here. $29.99</label>
+        <form id="form">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="text" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Invalid email format">
+            </div>
+            <div>
+                <label for="size">Select your size:</label>
+                <select name="size" id="size">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+            </div>
+            <div>
+                <label for="extra-sweater">Check here if you would like an embossed sweater ($10 extra):</label>
+                <input type="checkbox" id="extra-sweater">
+            </div>
+            <div>
+                <strong>
+                    <label>Discount for DePaul Community</label>
+                </strong>
+                <div id="discounts">
+                    <div>
+                        <label for="depaul-students">DePaul Students: 25% off</label>
+                        <input name="discount" value="students" type="radio" id="depaul-students">
+                    </div>
+                    <div>
+                        <label for="alumni">Alumni: 10% off</label>
+                        <input name="discount" value="alumni" type="radio" id="alumni">
+                    </div>
+                    <div>
+                        <label for="staff">Staff: 15% off</label>
+                        <input name="discount" value="staff" type="radio" id="staff">
+                    </div>
+                    <div>
+                        <label for="faculty">Faculty: 15% off</label>
+                        <input name="discount" value="faculty" type="radio" id="faculty">
+                    </div>
+                </div>
+            </div>
+            <div id='alert' hidden>
+            </div>
+            <button type="submit">Order my Sweater</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
